@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 316cdbd7aa9ee7ffe3a4979edaf942b78c03a74080f6d7893d681d4f6bb3eb70
+-- hash: 546cfbe846c475f326b3c2fdd5da293a2988e74a7409efa86e81a9b5be1a8c99
 
 name:           frdomain
 version:        0.1.0.0
@@ -34,6 +34,7 @@ library
     , time
   exposed-modules:
       Ch3.Account
+      Ch3.Account.Impl
       Lib
   other-modules:
       Paths_frdomain

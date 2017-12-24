@@ -2,10 +2,11 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE AllowAmbiguousTypes #-}
 {-# LANGUAGE FunctionalDependencies #-}
+{-# LANGUAGE DuplicateRecordFields #-}
 
 module Ch3.Account 
     (
-    AccountService
+    AccountService(..)
     )
 where
 
