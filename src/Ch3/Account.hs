@@ -6,23 +6,24 @@
 
 module Ch3.Account 
     (
-    AccountService(..)
+    AccountService(..),
+    Try,
+    Exception(..)
     )
 where
 
 import Data.Time
 import Data.Either
-import Control.Exception
 
-data AccountServiceException = forall e . Exception e => AccountServiceException e
+newtype Exception = Exception String
 
-type Try a = Either AccountServiceException a
+type Try a = Either Exception a
 
 class (Num amount) => AccountService account balance amount | account -> balance amount where
     open :: String -> String -> Maybe Day -> Try account
     close :: account -> Maybe Day -> Try account
-    debit :: acount -> amount -> Try account
-    credit :: acount -> amount -> Try account
+    debit :: account -> amount -> Try account
+    credit :: account -> amount -> Try account
     balance :: account -> Try balance
 
     transfer :: account -> account -> amount -> Try (account, account, amount)
