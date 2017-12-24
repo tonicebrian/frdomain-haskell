@@ -21,12 +21,13 @@ description:         Please see the README on Github at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
+- time
 
 library:
   source-dirs: src
 
 executables:
-  frdomain-exe:
+  frdomain:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
