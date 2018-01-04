@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 546cfbe846c475f326b3c2fdd5da293a2988e74a7409efa86e81a9b5be1a8c99
+-- hash: 690cfe4fe86af3be1250fd8a44aaf202005f48e0c41bae26580e67f7c754b196
 
 name:           frdomain
 version:        0.1.0.0
@@ -31,10 +31,15 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , semigroups
     , time
   exposed-modules:
       Ch3.Account
       Ch3.Account.Impl
+      Ch5.Domain
+      Ch5.Model.Account
+      Ch5.Model.AccountService
+      Ch5.Repository.AccountRepository
       Lib
   other-modules:
       Paths_frdomain
@@ -48,6 +53,7 @@ executable frdomain
   build-depends:
       base >=4.7 && <5
     , frdomain
+    , semigroups
     , time
   other-modules:
       Paths_frdomain
@@ -62,6 +68,7 @@ test-suite frdomain-test
   build-depends:
       base >=4.7 && <5
     , frdomain
+    , semigroups
     , time
   other-modules:
       Paths_frdomain
